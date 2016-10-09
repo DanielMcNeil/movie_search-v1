@@ -198,20 +198,33 @@ button {
   Description Page
 ==================================== */
 
-.description-container-top {
-  background-color: #4c4c4c;
-  margin-top: -3.2em;
+#descriptionContainer {
+  margin-top: -2.2em;
+  background-color: #fff;
+  padding-bottom: 1.0em;
 }
 
-.description-container-bottom {
-  width: 100%;
-  background-color: #fff;
-  min-height: 26.5em;
+.description-left, .description-right {
+  background: url('../img/background.jpg');
+  background-size: 100% 200px;
+  background-repeat: no-repeat;
+}
+
+.description-left {
+  width: 40%;
+  display: inline-block;
+}
+
+.description-right {
+  width: 60%;
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 1.2em;
 }
 
 .back-to-search {
   color: #fff;
-  padding: 1.5em 0 0.5em 2.0em;
+  padding: 0.2em 0 0.2em 2.0em;
 }
 
 .back-to-search span {
@@ -221,14 +234,15 @@ button {
 }
 
 .description-poster {
-  float: left;
   margin-left: 2.0em;
   margin-right: 2.0em;
+  margin-bottom: 2.0em;
   border: 10px solid #fff;
 }
 
 .description-title {
   color: #fff;
+  margin-top: 2.5em;
   font-size: 2.1em;
   font-weight: 600;
   line-height: 1.15;
@@ -236,13 +250,13 @@ button {
 
 .description-rating {
   color: #b4b4b4;
-  margin-top: -2.0em;
+  margin-top: -1.9em;
   font-size: 0.95em;
   font-weight: 600;
 }
 
 .description-plot-title {
-  padding-top: 2.0em;
+  padding-top: 2.7em;
   font-weight: 600;
 }
 
@@ -343,5 +357,37 @@ button {
 
   .movie-list li:nth-of-type(4n+1) {
     clear: left;
+  }
+}
+
+/* ================================== 
+  Media Queries for Description Page
+===================================== */
+
+@media (max-width: 1040px) {
+  .description-left,.description-right {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .description-poster {
+    margin: 0 auto;
+    display: inherit;
+  }
+  .description-left,.description-right {
+    display: block;
+    width: 100%
+  }
+  .description-right {
+    background-size: 100% 120px;
+  }
+  .description-rating,.description-plot-title,.description-plot,.description-link {
+    margin-left: 0.75em;
+  }
+  .description-title {
+    margin-top: 0;
+    margin-left: 0.3em;
+    padding-top: 0.2em;
   }
 }
